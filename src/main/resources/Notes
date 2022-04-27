@@ -1,0 +1,4 @@
+Deploy the mulesoft application and test without setting the HttpStatus hence it will send the HttpStatus as 500 Internal Server Error as we are testing with wrong empId
+Now if you want to change the HttpStatus from 500 to 400(Bad Request), Please follow the below step
+
+Add the variable under on error propagate and give the name of the variable as httpStatus and value as 400

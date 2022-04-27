@@ -1,0 +1,24 @@
+#%RAML 1.0
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/ba98d886-7a16-4c6e-9e62-d3a8723dffe2/ # 
+title: employee
+description: This API is to retrieve employeeid
+version: v1
+mediaType:  [ application/json ]
+protocols:
+  - HTTP
+
+/employee:
+  get:
+    displayName: Retrieve employee
+    description: Retrieve employee by empid
+    queryParameters:
+      empId:
+          type: string
+          description: "EmpId"
+          example: "342343"
+          required: false
+    responses:
+      200:
+        description: Success repsonse of employee
+        body:
+          application/json:
